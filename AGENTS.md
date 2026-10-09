@@ -12,7 +12,9 @@ cLLm (Championship Large Language Manager) is a fork of OpenFoot Manager (OFM): 
 Manager 01/02-style game that starts in the 2001/02 season and will use LLMs across the game.
 This section adds the fork's rules; every upstream rule below still applies.
 
-- **Name.** The product is spelled `cLLm`, exactly, wherever a player or reader sees it.
+- **Name.** The product is spelled `cLLm`, exactly, wherever a player or reader sees it. The
+  built program is `cllm` (`mainBinaryName` in `tauri.conf.json`); the Cargo package keeps its
+  upstream name.
 - **Branches.** cLLm's only long-lived branch is `main`; read `develop` in the upstream rules
   below as `main`. Upstream's branch is still `develop`, so merges come from `upstream/develop`.
 - **Mergeable fork.** We merge `upstream/develop` often, and upstream moves fast. Put cLLm-only
