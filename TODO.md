@@ -64,6 +64,8 @@ Turn a player's own CM 01/02 install into a cLLm world that starts in the 2001/0
 ## Housekeeping
 
 - [ ] Merge `upstream/develop` regularly.
+- [ ] CI workflows in `.github/workflows/` still trigger on `develop`, so none run on `main`.
+      Decide which to keep; the nightly and release ones publish builds and need secrets.
 - [ ] Discord button still opens Openfoot Manager's Discord (`src/lib/communityLinks.ts`).
 - [ ] Settings still shows "Sturdy Robot" as publisher (`app.publisher` in every locale).
 - [ ] Old Openfoot Manager logo files in `public/` and `images/` are unused.

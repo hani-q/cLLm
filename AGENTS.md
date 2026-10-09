@@ -13,6 +13,8 @@ Manager 01/02-style game that starts in the 2001/02 season and will use LLMs acr
 This section adds the fork's rules; every upstream rule below still applies.
 
 - **Name.** The product is spelled `cLLm`, exactly, wherever a player or reader sees it.
+- **Branches.** cLLm's only long-lived branch is `main`; read `develop` in the upstream rules
+  below as `main`. Upstream's branch is still `develop`, so merges come from `upstream/develop`.
 - **Mergeable fork.** We merge `upstream/develop` often, and upstream moves fast. Put cLLm-only
   work in new files, modules or crates, and keep edits to upstream files small. Keep upstream's
   internal names (`ofm_*` crates, the `.ofm` format, `OFM_*` env vars, upstream docs); rebrand

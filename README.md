@@ -6,7 +6,7 @@
 [![Rust](https://shields.io/badge/-Rust-FF4500?style=flat&logo=rust)](https://www.rust-lang.org/)
 [![Tauri](https://shields.io/badge/-Tauri-2E8B57?style=flat&logo=tauri)](https://tauri.app/)
 [![React](https://shields.io/badge/-React-1434A4?style=flat&logo=react)](https://react.dev/)
-[![Last commit](https://img.shields.io/github/last-commit/hani-q/cLLm)](https://github.com/hani-q/cLLm/commits/develop)
+[![Last commit](https://img.shields.io/github/last-commit/hani-q/cLLm)](https://github.com/hani-q/cLLm/commits/main)
 
 [Features](#features) • [The CM 01/02 database](#the-cm-0102-database) • [Installation](#installation--development) • [Contributing](#contributing) • [License](#license)
 
@@ -120,7 +120,7 @@ git merge upstream/develop
 ## CONTRIBUTING
 
 Issues and pull requests are welcome at [hani-q/cLLm](https://github.com/hani-q/cLLm). Work from
-a feature branch and open pull requests against `develop`. [AGENTS.md](AGENTS.md) and
+a feature branch and open pull requests against `main`. [AGENTS.md](AGENTS.md) and
 [CONTRIBUTING](CONTRIBUTING.md) describe the coding rules, which cLLm keeps from upstream.
 
 Run tests before submitting:
