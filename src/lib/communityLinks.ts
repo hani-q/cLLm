@@ -6,4 +6,4 @@
  * screens is the kind of thing nobody notices until someone lands somewhere unexpected.
  */
 export const DISCORD_INVITE_URL = "https://discord.gg/2CXaesaukT";
-export const GITHUB_REPO_URL = "https://github.com/openfootmanager/openfootmanager";
+export const GITHUB_REPO_URL = "https://github.com/hani-q/cLLm";

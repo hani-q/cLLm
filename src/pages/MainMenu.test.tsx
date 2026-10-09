@@ -875,7 +875,7 @@ describe("MainMenu", () => {
     fireEvent.click(githubButton);
 
     expect(openUrlMock).toHaveBeenCalledTimes(1);
-    expect(openUrlMock).toHaveBeenCalledWith("https://github.com/openfootmanager/openfootmanager");
+    expect(openUrlMock).toHaveBeenCalledWith("https://github.com/hani-q/cLLm");
   });
 
   describe("profile confirm modal", () => {
