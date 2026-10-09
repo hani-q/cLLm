@@ -66,6 +66,15 @@ fn run() -> Result<(), String> {
 /// the game would reject fails here instead of on the new-game screen.
 fn verify(path: &std::path::Path) -> Result<(), String> {
     let world = ofm_core::generator::load_world_from_path(path)?;
+    // Saves store one holder per squad number per club.
+    let mut numbers = std::collections::HashSet::new();
+    for player in &world.players {
+        if let (Some(team), Some(number)) = (&player.team_id, player.jersey_number)
+            && !numbers.insert((team.clone(), number))
+        {
+            return Err(format!("{team} has two players wearing {number}"));
+        }
+    }
     let definitions = world
         .competition_definitions
         .as_ref()

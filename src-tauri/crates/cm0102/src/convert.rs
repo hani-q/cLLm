@@ -116,8 +116,17 @@ pub fn build_world(
     let mut players = Vec::new();
     let mut wage_bills: HashMap<i32, i64> = HashMap::new();
     for club in &clubs {
+        // CM lets reserves share a first-teamer's squad number; the game's saves need one
+        // holder per number per club, so later holders lose theirs.
+        let mut numbers_taken = HashSet::new();
         for staff in club.squad.iter().filter_map(|id| staff_by_id.get(id)) {
-            if let Some(player) = player_json(db, staff, Some(club.id)) {
+            if let Some(mut player) = player_json(db, staff, Some(club.id)) {
+                if let Some(number) = player.get("jersey_number").and_then(Value::as_u64)
+                    && !numbers_taken.insert(number)
+                    && let Some(fields) = player.as_object_mut()
+                {
+                    fields.remove("jersey_number");
+                }
                 *wage_bills.entry(club.id).or_default() += euros(staff.wage);
                 players.push(player);
             }
@@ -420,7 +429,7 @@ fn player_json(db: &Database, staff: &Staff, club: Option<i32>) -> Option<Value>
         "career": [],
         "potential": potential_target(p),
     });
-    if (1..=99).contains(&p.squad_number) {
+    if club.is_some() && (1..=99).contains(&p.squad_number) {
         player["jersey_number"] = json!(p.squad_number);
     }
     Some(player)
