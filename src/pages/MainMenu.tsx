@@ -40,7 +40,9 @@ const CreateManagerForm = lazy(() => import("../components/menu/CreateManagerFor
 const ProfileSaveConfirm = lazy(() => import("../components/menu/ProfileSaveConfirm"));
 const SavesList = lazy(() => import("../components/menu/SavesList"));
 const PackageBuildStep = lazy(() => import("../components/menu/PackageBuildStep"));
+import { GENERATED_WORLD_ID, type WorldDatabaseInfo } from "../components/menu/WorldDatabasePicker";
 const GenerationStep = lazy(() => import("../components/menu/WorldSelect"));
+const WorldDatabasePicker = lazy(() => import("../components/menu/WorldDatabasePicker"));
 
 interface SaveEntry {
   id: string;
@@ -293,6 +295,14 @@ export default function MainMenu() {
   const [isInstallingPackage, setIsInstallingPackage] = useState(false);
   const [packageStackErrors, setPackageStackErrors] = useState<PackageIssue[]>([]);
   const [historyDepthYears, setHistoryDepthYears] = useState(initialHistoryDepthYears);
+  const [worldDatabases, setWorldDatabases] = useState<WorldDatabaseInfo[]>([]);
+  const [selectedWorldId, setSelectedWorldId] = useState(GENERATED_WORLD_ID);
+  useEffect(() => {
+    if (menuState !== "generation") return;
+    invoke<WorldDatabaseInfo[]>("list_world_databases")
+      .then((databases) => setWorldDatabases(Array.isArray(databases) ? databases : []))
+      .catch((error: unknown) => console.error("Failed to list world databases:", error));
+  }, [menuState]);
 
   useEffect(() => {
     window.localStorage.setItem(GENERATED_HISTORY_DEPTH_STORAGE_KEY, String(historyDepthYears));
@@ -515,6 +525,7 @@ export default function MainMenu() {
         nationality: formData.nationality,
         startupOptions,
         packageIds: activePackageIds.length > 0 ? activePackageIds : undefined,
+        worldSource: selectedWorldId === GENERATED_WORLD_ID ? undefined : selectedWorldId,
       });
       applyExtraTranslations(game.extra_translations);
       setGameState(game);
@@ -834,6 +845,11 @@ export default function MainMenu() {
           {/* Step 2b: Generation & Completion */}
           {menuState === "generation" && (
             <Suspense fallback={<MenuPanelFallback />}>
+              <WorldDatabasePicker
+                databases={worldDatabases}
+                selectedId={selectedWorldId}
+                onSelect={setSelectedWorldId}
+              />
               <GenerationStep
                 isStarting={isStarting}
                 startYear={parseCareerStartYear(formData.startYear) ?? MIN_CAREER_START_YEAR}

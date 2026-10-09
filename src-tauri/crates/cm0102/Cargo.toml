@@ -1,0 +1,19 @@
+[package]
+name = "cm0102"
+version = "0.3.0"
+edition = "2024"
+publish = false
+description = "Reads a Championship Manager 01/02 database (CM3_Data) and converts it into a cLLm world"
+
+[[bin]]
+name = "cm0102-import"
+path = "src/bin/cm0102-import.rs"
+
+[dependencies]
+domain = { version = "0.3.0", path = "../domain" }
+ofm_core = { version = "0.3.0", path = "../ofm_core" }
+serde_json = "1"
+chrono = "0.4.44"
+
+[lints]
+workspace = true

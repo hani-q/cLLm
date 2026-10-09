@@ -26,7 +26,11 @@
     "mainMenu": "Hlavní menu",
     "worldEditor": "Editor světa",
     "startupOptionsRejected": "Tato nastavení kariéry nebylo možné použít. Vraťte se na obrazovku světa a zkontrolujte rok začátku, fázi začátku a kolik minulé historie se má vygenerovat.",
-    "reportBug": "Nahlásit chybu"
+    "reportBug": "Nahlásit chybu",
+    "worldDatabase": "Svět",
+    "generatedWorld": "Generovaný svět",
+    "worldDatabaseDetail": "{{teams}} klubů, {{players}} hráčů",
+    "worldDatabaseHint": "Tento svět začíná vlastním datem. Váš manažer musí být k tomu dni alespoň 30letý."
   },
   "managerProfiles": {
     "saveConfirm": {
@@ -4173,12 +4177,12 @@
     "itemCrashDesc": "Přiloženo, protože při vaší minulé hře něco spadlo.",
     "optionalHeading": "Přidejte, pokud chcete — ve výchozím stavu vypnuto",
     "includeSave": "Moje uložená hra",
-      "includeSaveDesc": "Umožní nám přehrát přesně tu situaci, ve které jste se ocitli.",
+    "includeSaveDesc": "Umožní nám přehrát přesně tu situaci, ve které jste se ocitli.",
     "includeSaveNoCareer": "Žádná kariéra není otevřená, není co přiložit.",
     "nothingSentYet": "Nic se neuloží ani neotevře, dokud nestisknete tlačítko níže. Odeslání formuláře vyžaduje účet na GitHubu — soubor je váš tak jako tak.",
     "savedTo": "Soubor s hlášením byl uložen sem:",
     "dragItIn": "Přetáhněte ho do formuláře na GitHubu v prohlížeči a odešlete. A to je všechno.",
-      "browserDidNotOpen": "Prohlížeč se neotevřel. Soubor výše je uložený — přiložte ho k novému issue na GitHubu, až budete moci.",
+    "browserDidNotOpen": "Prohlížeč se neotevřel. Soubor výše je uložený — přiložte ho k novému issue na GitHubu, až budete moci.",
     "review": "Zkontrolovat, co se odešle",
     "saveAndOpen": "Uložit soubor a otevřít GitHub",
     "working": "Pracuji…"

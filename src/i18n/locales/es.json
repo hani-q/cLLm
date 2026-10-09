@@ -26,7 +26,11 @@
     "mainMenu": "Menú principal",
     "worldEditor": "Editor de Mundos",
     "startupOptionsRejected": "No se han podido usar esos ajustes de carrera. Vuelve a la pantalla del mundo y revisa el año de inicio, la fase de inicio y cuánta historia previa generar.",
-    "reportBug": "Informar de un fallo"
+    "reportBug": "Informar de un fallo",
+    "worldDatabase": "Mundo",
+    "generatedWorld": "Mundo generado",
+    "worldDatabaseDetail": "{{teams}} clubes, {{players}} jugadores",
+    "worldDatabaseHint": "Este mundo empieza en su propia fecha. Tu mánager debe tener al menos 30 años entonces."
   },
   "managerProfiles": {
     "saveConfirm": {
@@ -4173,12 +4177,12 @@
     "itemCrashDesc": "Se incluye porque algo falló durante tu última sesión.",
     "optionalHeading": "Añádelo si quieres: desactivado por defecto",
     "includeSave": "Mi partida guardada",
-      "includeSaveDesc": "Nos permite reproducir la situación exacta en la que estabas.",
+    "includeSaveDesc": "Nos permite reproducir la situación exacta en la que estabas.",
     "includeSaveNoCareer": "No hay ninguna carrera abierta, así que no hay nada que adjuntar.",
     "nothingSentYet": "No se guarda ni se abre nada hasta que pulses el botón de abajo. Enviar el formulario requiere una cuenta de GitHub; el archivo es tuyo en cualquier caso.",
     "savedTo": "Tu archivo de informe se ha guardado aquí:",
     "dragItIn": "Arrástralo al formulario de GitHub en tu navegador y envíalo. Eso es todo.",
-      "browserDidNotOpen": "Tu navegador no se ha abierto. El archivo de arriba está guardado: adjúntalo a una incidencia nueva en GitHub cuando puedas.",
+    "browserDidNotOpen": "Tu navegador no se ha abierto. El archivo de arriba está guardado: adjúntalo a una incidencia nueva en GitHub cuando puedas.",
     "review": "Revisar qué se envía",
     "saveAndOpen": "Guardar el archivo y abrir GitHub",
     "working": "Trabajando…"

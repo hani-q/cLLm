@@ -26,7 +26,11 @@
     "mainMenu": "Menu Utama",
     "worldEditor": "Editor Dunia",
     "startupOptionsRejected": "Pengaturan karier itu tidak bisa digunakan. Kembali ke layar dunia dan periksa tahun mulai, fase mulai, dan berapa banyak riwayat masa lalu yang dibuat.",
-    "reportBug": "Laporkan bug"
+    "reportBug": "Laporkan bug",
+    "worldDatabase": "Dunia",
+    "generatedWorld": "Dunia acak",
+    "worldDatabaseDetail": "{{teams}} klub, {{players}} pemain",
+    "worldDatabaseHint": "Dunia ini dimulai pada tanggalnya sendiri. Manajer Anda harus berusia minimal 30 tahun saat itu."
   },
   "managerProfiles": {
     "saveConfirm": {
@@ -4173,12 +4177,12 @@
     "itemCrashDesc": "Disertakan karena ada yang macet pada sesi terakhirmu.",
     "optionalHeading": "Tambahkan kalau mau — mati secara bawaan",
     "includeSave": "Berkas simpananku",
-      "includeSaveDesc": "Memungkinkan kami memutar ulang situasi persis yang kamu alami.",
+    "includeSaveDesc": "Memungkinkan kami memutar ulang situasi persis yang kamu alami.",
     "includeSaveNoCareer": "Tidak ada karier yang terbuka, jadi tidak ada yang bisa dilampirkan.",
     "nothingSentYet": "Tidak ada yang disimpan atau dibuka sampai kamu menekan tombol di bawah. Mengirim formulir butuh akun GitHub — berkasnya tetap milikmu.",
     "savedTo": "Berkas laporanmu disimpan di sini:",
     "dragItIn": "Seret ke formulir GitHub di peramban, lalu kirim. Selesai.",
-      "browserDidNotOpen": "Peramban tidak terbuka. Berkas di atas sudah tersimpan — lampirkan ke issue baru di GitHub saat sempat.",
+    "browserDidNotOpen": "Peramban tidak terbuka. Berkas di atas sudah tersimpan — lampirkan ke issue baru di GitHub saat sempat.",
     "review": "Tinjau yang akan dikirim",
     "saveAndOpen": "Simpan berkas dan buka GitHub",
     "working": "Sedang bekerja…"

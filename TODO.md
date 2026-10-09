@@ -7,11 +7,15 @@ Work queued for cLLm, roughly in order. Fork rules live in the `cLLm` section of
 
 Turn a player's own CM 01/02 install into a cLLm world that starts in the 2001/02 season.
 
-- [ ] New crate under `src-tauri/crates/` that reads `CM3_Data/` and writes an `.ofm` package
-      directory; check the output with `ofm-cli validate` and pack it with `ofm-cli pack`.
-- [ ] Read `index.dat`: an 8-byte header, then 22 entries of 67 bytes (51-byte file name, then
+- [x] `src-tauri/crates/cm0102`: `cm0102-import <CM3_Data> <world.json>` writes a JSON world
+      (2001/02 snapshot, real leagues, cups, European Cup) and reloads it through the game's loader.
+- [x] New-game screen lists JSON worlds from the `databases` folder.
+- [ ] Wages and money: CM pounds are converted to euros at 1.6; check they feel right in play.
+- [ ] Player ratings come from attributes, so some stars rate lower than CM's ability says
+      (Beckham 71, Totti 95). Consider blending in CM current ability.
+- [x] Read `index.dat`: an 8-byte header, then 22 entries of 67 bytes (51-byte file name, then
       `u32` id, count, offset, version, little-endian).
-- [ ] Read the record tables. Sizes measured on the original 3.9.68 data:
+- [x] Read the record tables. Sizes measured on the original 3.9.68 data:
 
   | File / section | Records | Bytes each |
   |---|---|---|
