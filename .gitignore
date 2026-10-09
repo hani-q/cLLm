@@ -56,3 +56,9 @@ test-world.json
 
 # Benchmark output from scripts/perf/run-matrix.sh (machine-specific measurements)
 /scripts/perf/results/
+
+# cLLm: Championship Manager 01/02 game data is user-supplied and never committed
+*.dat
+*.DAT
+*.iso
+CM3_Data/

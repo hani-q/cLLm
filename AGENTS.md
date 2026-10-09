@@ -1,10 +1,37 @@
 # AGENTS.md
 
-Conventions for AI coding agents contributing to OpenFoot Manager. Tool-agnostic — Claude Code,
+Conventions for AI coding agents contributing to cLLm, a fork of OpenFoot Manager. Tool-agnostic — Claude Code,
 Cursor, Copilot, Codex, Aider, or anything else.
 
 Claude Code users get more: see [`CLAUDE.md`](CLAUDE.md) for the full command reference plus the
 project's skills (`/add-ui-string`, `/preflight`, …) and review agents in `.claude/`.
+
+## cLLm
+
+cLLm (Championship Large Language Manager) is a fork of OpenFoot Manager (OFM): a Championship
+Manager 01/02-style game that starts in the 2001/02 season and will use LLMs across the game.
+This section adds the fork's rules; every upstream rule below still applies.
+
+- **Name.** The product is spelled `cLLm`, exactly, wherever a player or reader sees it.
+- **Mergeable fork.** We merge `upstream/develop` often, and upstream moves fast. Put cLLm-only
+  work in new files, modules or crates, and keep edits to upstream files small. Keep upstream's
+  internal names (`ofm_*` crates, the `.ofm` format, `OFM_*` env vars, upstream docs); rebrand
+  only what a player sees. A fix that helps OFM too goes to `openfootmanager/openfootmanager` as
+  its own PR; the `upstream` remote here is fetch-only.
+- **User-supplied CM 01/02 data.** The game reads the CM 01/02 database (`CM3_Data/`:
+  `index.dat`, `staff.dat`, `club.dat`, …) at runtime from the player's own copy. The repository
+  holds only synthetic fixtures written for tests, and `.gitignore` blocks `*.dat` so it stays
+  that way. Tests against real data read the folder from `CLLM_CM0102_DATA` and skip when it is
+  unset.
+- **Borrowed code keeps its license.** Copy code only from GPL-3.0-compatible sources (GPL-3.0,
+  GPL-2.0-or-later, Apache-2.0, MIT), and name the source project, URL and license in a header
+  comment of the file that holds it. A repository without a license (for example
+  `CoopApps/0201CM`, `nckstwrt/CM0102Patcher`) is reference only: read it, then write your own.
+- **Brand assets.** `images/cllm-icon.svg` is the source of every app icon. After changing it,
+  run `npx tauri icon images/cllm-icon.svg -o src-tauri/icons`, then copy
+  `src-tauri/icons/128x128@2x.png` to `public/cllm-icon.png` (the favicon).
+  `public/cllm-logo.svg` (README, main menu) and `public/cllm-mark.svg` (sidebar) are edited
+  directly.
 
 ## Build and test
 

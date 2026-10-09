@@ -2,6 +2,9 @@
 
 Guidance for Claude Code and other AI coding agents working in this repository.
 
+**cLLm fork rules** (naming, upstream merges, CM 01/02 data, borrowed code, brand assets) live in
+the `cLLm` section of [`AGENTS.md`](AGENTS.md). Read it before any change.
+
 This file is an **index and a rulebook**, not a second architecture document. Anything already
 explained in `docs/` is linked from here, never restated, so the two cannot drift apart.
 
