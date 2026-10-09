@@ -62,3 +62,7 @@ test-world.json
 *.DAT
 *.iso
 CM3_Data/
+
+# cLLm: local clones of reference projects (see references/README.md for the list)
+/references/*
+!/references/README.md
