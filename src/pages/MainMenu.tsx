@@ -300,7 +300,16 @@ export default function MainMenu() {
   useEffect(() => {
     if (menuState !== "generation") return;
     invoke<WorldDatabaseInfo[]>("list_world_databases")
-      .then((databases) => setWorldDatabases(Array.isArray(databases) ? databases : []))
+      .then((databases) => {
+        const list = Array.isArray(databases) ? databases : [];
+        setWorldDatabases(list);
+        // A world file the player put in the databases folder is why they are here; start on it.
+        const firstFile = list.find((db) => db.id !== GENERATED_WORLD_ID);
+        if (firstFile)
+          setSelectedWorldId((current) =>
+            current === GENERATED_WORLD_ID ? firstFile.id : current,
+          );
+      })
       .catch((error: unknown) => console.error("Failed to list world databases:", error));
   }, [menuState]);
 
