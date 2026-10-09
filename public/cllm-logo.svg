@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" width="640" height="300">
+<defs><clipPath id="banner"><rect width="320" height="150" rx="14"/></clipPath></defs>
+<g clip-path="url(#banner)"><rect width="320" height="150" fill="#1f7a3a"/><rect x="34" width="34" height="150" fill="#23843f"/><rect x="102" width="34" height="150" fill="#23843f"/><rect x="170" width="34" height="150" fill="#23843f"/><rect x="238" width="34" height="150" fill="#23843f"/><rect x="306" width="34" height="150" fill="#23843f"/></g>
+<defs><clipPath id="ballclip-logo"><circle cx="72" cy="70" r="46"/></clipPath></defs>
+<path d="M42.5 109.3 L20 136 L61.7 117.3 A48 48 0 1 0 42.5 109.3 Z" fill="#fff" stroke="#0d2b16" stroke-width="4" stroke-linejoin="round"/>
+<g clip-path="url(#ballclip-logo)" fill="#0d2b16" stroke="#0d2b16" stroke-width="2">
+<polygon points="72.00,57.00 84.36,65.98 79.64,80.52 64.36,80.52 59.64,65.98"/><line x1="72.00" y1="57.00" x2="72.00" y2="40.00"/><line x1="84.36" y1="65.98" x2="100.53" y2="60.73"/><line x1="79.64" y1="80.52" x2="89.63" y2="94.27"/><line x1="64.36" y1="80.52" x2="54.37" y2="94.27"/><line x1="59.64" y1="65.98" x2="43.47" y2="60.73"/><polygon points="91.40,43.30 87.04,29.89 98.45,21.59 109.86,29.89 105.50,43.30"/><polygon points="103.38,80.20 114.80,71.91 126.21,80.20 121.85,93.61 107.74,93.61"/><polygon points="72.00,103.00 83.41,111.29 79.05,124.71 64.95,124.71 60.59,111.29"/><polygon points="40.62,80.20 36.26,93.61 22.15,93.61 17.79,80.20 29.20,71.91"/><polygon points="52.60,43.30 38.50,43.30 34.14,29.89 45.55,21.59 56.96,29.89"/>
+</g>
+<text x="140" y="84" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,Lato,sans-serif" font-size="50" font-weight="800" fill="#fff" letter-spacing="-1">cLLm</text>
+<g fill="#fff"><circle cx="146" cy="102" r="3.2"/><circle cx="157" cy="102" r="3.2" opacity=".7"/><circle cx="168" cy="102" r="3.2" opacity=".45"/></g>
+<text x="142" y="123" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,Lato,sans-serif" font-size="8.5" font-weight="600" fill="#e3f5e8" textLength="96" lengthAdjust="spacing">CHAMPIONSHIP</text>
+<text x="142" y="136" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,Lato,sans-serif" font-size="8.5" font-weight="600" fill="#e3f5e8" textLength="150" lengthAdjust="spacing">LARGE LANGUAGE MANAGER</text>
+</svg>

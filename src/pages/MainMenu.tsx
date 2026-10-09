@@ -690,7 +690,7 @@ export default function MainMenu() {
         <div className="bg-white dark:bg-navy-800 p-8 rounded-b-2xl shadow-xl dark:shadow-2xl border border-gray-200 dark:border-navy-600 border-t-0 transition-all duration-500">
           {/* Logo */}
           <img
-            src="/openfootlogo.svg"
+            src="/cllm-logo.svg"
             alt={t("app.name")}
             className="text-center w-full h-full object-cover"
           />

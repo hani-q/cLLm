@@ -156,7 +156,7 @@ export default function DashboardSidebar({
         >
           <div className={`flex items-center ${collapsed ? "justify-center" : "gap-2"}`}>
             <div className="w-8 h-8 flex items-center justify-center">
-              <img src="../../openfootball.svg" alt={appName} className="w-8 h-8" />
+              <img src="../../cllm-mark.svg" alt={appName} className="w-8 h-8" />
             </div>
             {collapsed ? null : (
               <div>
